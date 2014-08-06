@@ -1,21 +1,180 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
-    title= pageTitle
-    script(type='text/javascript').
-      if (foo) {
-         bar(1 + 5)
-      }
+    title=PCURIO
+    
+    //- Favicon
+    //-add in svg inject
+
+    //- Fonts
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,200,500' rel='stylesheet' type='text/css')
+    link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet' rel='stylesheet')
+
+
+    //- CSS
+    link(rel='stylesheet' type='text/css' href='css/style.css')
+    link(rel='stylesheet' type='text/css' href='css/bootstrap-social.css')
+    link(rel='stylesheet' type='text/css' href='css/font-awesome.css')   
+
   body
-    h1 Jade - node template engine
-    #container.col
-      if youAreUsingJade
-        p You are amazing!
-      else
-        p Get on it!
-      p.
-        Jade is a terse and simple
-        templating language with a
-        strong focus on performance
-        and powerful features.
-      span.svg-pcurio
+    header
+      div.wrapper.headerpad
+        //- SITE TITLE
+        div.siteTitle.nav
+          h1 
+            a.scrollink(href='#' data-id="top-link") PCURIO 
+
+        //- PCURIO LOGO
+        div.logo
+          //- HEY: rework with inline svg from js
+          img.svg(src="images/pcurio.svg")
+
+        //- NAVIGATION
+        ul.nav
+          li
+            a.scroll-link(href='#' data-id='work-link') Work/Contact
+          li
+            a.scroll-link(href='#' data-id='resume-link') Resume
+          li
+            a.scroll-link(href='#' data-id='about-link')
+        //-END NAVIGATION
+        
+    //-INTRO SPLASH
+    section#top-link.splash
+      div.wrapper    
+        div.container.container1
+          //-HEY: replace with inline svg from js
+          img.svg(src='images/pcurio.svg')
+          h2 hey hey I&rsquo;m Alex.
+          p.myTitle designer/front-end developer
+
+        div.container
+          h3 Perpetuating Curiosity is my design practice.
+          p | *pcurio.com is the beginnings of my career as a front-end 
+            | developer. I&rsquo;ll be adding work and documenting my 
+            | training as I go through 9 weeks of front-end bootcamp at
+            a(href="http://hackeryou.com") HackerYou
+          
+          p.note | (For my design work, see
+            a(href="http://perpetuatingcuriosity.com") perpetuatingcuriosity
+                 | .com)
+      //-SPLASH
+
+    //------------------------------------------------------------      
+
+    //-ABOUT SECTION STARTS
+    include()
+
+    article#about-link.about
+
+      //-INTERESTS
+      section.interests
+        div.wrapper
+          p | I&rsquo;m most passionate about using my skills design and 
+            | development to create solutions to problems that aren&rsquo;t
+            | limited to print or digital.
+
+          p | My superpower is my ability to discover, recall and apply 
+            | information.
+      
+      //-SKILLS    
+      section.skills
+        
+        h3 I speak:
+        ul.skillList
+          li HTML5
+          li CSS3
+          li Grunt
+          li Illustrator
+          li Photoshop
+          li InDesign
+          li Final Cut
+        ul.skillList
+          li English
+          li Advanced French
+
+
+        h3 I&rsquo;m currently learning:
+        ul.skillList
+          li Jade
+          li JavaScript
+          li jQuery
+          li APIs
+          li The German Language
+
+        h3 I&rsquo;m crazy about:
+        ul.skillList
+          li Service Design
+          li Building Things with Code
+          li Information Design
+          li Design Education
+      //-/.SKILLS
+      
+      //-CONTACT LINKS
+      section.work-contact
+        h3 Connect with me:
+
+        ul.skillList.socialList
+          li 
+            a(href='href="http://twitter.com/alexispcurio') Twitter
+          li
+            a(href='http://www.linkedin.com/in/perpetuatingcuriosity') LinkedIn
+          li
+            a(href='http://github.com/perpetuatingcuriosity') GitHub
+          li
+            a(href='http://twitter.com/perpetuatingcuriosity') Facebook
+          li
+            a(href='http://codepen.io/perpetuatingcuriosity') codepen
+          li
+            a(href='http://vimeo.com/perpetuatingcuriosity') Vimeo
+          li
+            a(href='http://soundcloud.com/perpetuatingcuriosity') Soundcloud
+
+        h3 or:
+          a(href='mailtoperpetuatingcuriosity@gmail.com') perpetuatingcuriosity@gmail.com
+        //-/.CONTACT LINKS ENDS
+    
+    //-/.ABOUT SECTION ENDS
+    
+    //-----------------------------------------------------------------
+    
+    //-RESUME STARTS
+    include ./includes/resume.jade
+
+    //- Javascript
+    script(type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(type='text/javascript' src='js/smoothscroll.js')
+    script(type='text/javascript' src="js/SVGinject.js") 
+
+
+
+
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
